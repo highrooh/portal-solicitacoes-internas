@@ -1,0 +1,17 @@
+services:
+  portal:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-local-compose-key-change-before-publishing}
+      DATABASE_PATH: /app/instance/solicitacoes.db
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      DEMO_USER_PASSWORD: ${DEMO_USER_PASSWORD:-Marina@2026}
+      DEMO_ADMIN_PASSWORD: ${DEMO_ADMIN_PASSWORD:-Gestor@2026}
+    volumes:
+      - portal_data:/app/instance
+    restart: unless-stopped
+
+volumes:
+  portal_data:

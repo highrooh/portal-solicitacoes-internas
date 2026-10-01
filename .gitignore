@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+instance/
+tmp/
+.vscode/
+.idea/
+.pytest_cache/
+/Seleção DEV Jr. 09_2026 - mini-projeto Full Stack.pdf
